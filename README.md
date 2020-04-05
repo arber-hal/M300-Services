@@ -24,4 +24,15 @@ K1
 2. Anschliessend habe ich ein Ubuntu 18.04 ISO File von der [Ubuntu Seite](https://ubuntu.com/download) heruntergeladen.
 3. VirtualBox starten
 4. Auf 'neu' klicken (erstellt neue VM)
-5. 
+5. VM mit folgenden Paramter erstellen
+* Name:      'M300_Ubuntu_18.04_desktop'
+* Typ:       'Linux'
+* Version:   'Ubuntu (64-Bit)'
+* Speichergrösse: '2048 MB'
+6. Festplatten erzeugen klicken
+*  Dateipfad:                       standard
+*  Dateigrösse:                     '10.00 GB'
+*  Dateityp der Festplatte:         'VMDK (Virtual Maschine Disk)'
+*  Storage on physical hard disk:   'dynamisch alloziert'
+7. Disk erzeugen
+8. Unter 'ändern' und  'Sata'
