@@ -9,6 +9,7 @@ In diesem Markdown Dokument teile ich meine Erfahrungen und Lernschritte die ich
   - [VirtualBox](#virtualbox)
   - [Vagrant](#vagrant)
   - [Visual Studio Code](#visual-studio-code)
+  - [Git-Client & SSH-Key](#Git-Client & SSH-Key)
 
 
 
@@ -154,3 +155,70 @@ VirtualBox ist eine Hypervisor Typ 2 Virtualisierungssoftware und benötigt somi
 7. Warten, bis Dateien vollständig gepusht wurden
 8. Anschliessen auf GitHub überpürfen ob alles funktioniert hat. 
 
+## Git-Client & SSH-Key
+> [⇧ *Nach oben*](#inhaltsverzeichnis)
+
+Als Git-Client habe ich [GitBash](https://git-scm.com/downloads)
+
+*Nach der Installation habe ich damit angefangen mein Repository zu klonen*
+
+1. GitBash öffnen
+2. Git einbinden
+   ```Shell
+      $ git config --global user.name "<username>"
+      $ git config --global user.email "<e-mail>"
+    ``` 
+*Repository klonen*
+1. GitBash öffnen
+2. LocalRep erstellen
+   ```Shell
+      $ cd C:\Users\arber\M300-Services
+      $ mkdir MyLocalRep
+     ```
+3.  Repository klonen
+ ```Shell
+    $ git clone git@github.com:arber-hal/M300-Services.git
+
+    Cloning into 'M300-Services'...
+``` 
+4. Repository aktualisieren und Status anzeigen:
+    ```Shell
+      $ git pull
+
+      Already up to date.
+    ```
+
+1. SSH Key erstellen
+ ```Shell
+      $  ssh-keygen -t rsa -b 4096 -C "arber.haliti@edu.tbz.ch"
+ ```
+2. Nachdem der SSH Key erstellt wurde muss dieser auf GitHub eingebunden werden
+3. Unter "Settings" und "SSH and GPG Keys"
+4. SSH Key von "C:\Users\arber\.ssh\id_rsa.pub" hinzufügen
+5. Anschliessend in ein Verzeichnis gehen wo eine bereits vorhandene VM ist und mit folgendem Code verbinden:
+´´´Shell
+vagrant ssh
+´´´
+K3
+======
+
+## Vagrant Befehle
+
+| Befehl                    | Beschreibung                                                      |
+| ------------------------- | ----------------------------------------------------------------- | 
+| `vagrant init`            | Initialisiert im aktuellen Verzeichnis eine Vagrant-Umgebung und erstellt, falls nicht vorhanden, ein Vagrantfile |
+| `vagrant up`              |  Erzeugt und Konfiguriert eine neue Virtuelle Maschine, basierend auf dem Vagrantfile |
+| `vagrant ssh`             | Baut eine SSH-Verbindung zur gewünschten VM auf                   |
+| `vagrant status`          | Zeigt den aktuellen Status der VM an                              |
+| `vagrant port`            | Zeigt die Weitergeleiteten Ports der VM an                        |
+| `vagrant halt`            | Stoppt die laufende Virtuelle Maschine                            |
+| `vagrant destroy`         | Stoppt die Virtuelle Maschine und zerstört sie.                   |
+
+## Testen
+### Apache
+1. Localhost auf dem Web-Browser eingegeben
+2. index.html geändert uind nachgeschaut ob es übernommen wurde
+3. mit folgendem Befehl wird das index.html in der Shell angezeigt
+´´´Shell
+curl -f [IP Adresse]
+´´´
