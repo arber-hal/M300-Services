@@ -63,11 +63,11 @@ Vagrant.configure("2") do |config|
   groupadd db
   groupadd web
   #Benutzer hinzufügen
-  useradd dbwilliam -p password
-  useradd webmatt -p password
+  useradd dbusr -p password
+  useradd webusr -p password
   #Benutzer der Gruppe hinzufügen
-  usermod -aG db dbwilliam
-  usermod -aG web webmatt
+  usermod -aG db dbusr
+  usermod -aG web webusr
   #Gruppenordner erstellen
   mkdir -p /grp/db
   mkdir -p /grp/web
