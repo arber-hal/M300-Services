@@ -37,4 +37,19 @@ K1
 7. Disk erzeugen.
 8. Unter 'ändern' und  'SATA-Controller' auf das CD+Symbol klicken.
 9. Unter 'Medium auswählen' die zuvor heruntergeladene ISO-Datei anwählen.
-10. Die [Installations und Konfigurations Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#vm-einrichten) der VM befolgen.
+10. Die Installations und Konfigurations der VM befolgen und abschliessen.
+
+*Im Terminal wurden dann die folgenden Befehle durchgeführt*
+1. Paketliste Updaten falls nötig
+   ```Shell 
+   $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
+   
+   $  sudo apt-get upgrade   #Installierte Pakete werden wenn möglich auf neuste Versionen aktualisiert
+
+   $  sudo reboot           #System-Neustart durchführen
+   ```
+2. Synpatic installieren
+    ```Shell 
+   $  sudo apt-get install synaptic
+   ```
+
