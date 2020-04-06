@@ -37,4 +37,4 @@ K1
 7. Disk erzeugen.
 8. Unter 'ändern' und  'SATA-Controller' auf das CD+Symbol klicken.
 9. Unter 'Medium auswählen' die zuvor heruntergeladene ISO-Datei anwählen.
-10. Die [Installations und Konfigurations Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#--03---virtualbox) der VM befolgen.
+10. Die [Installations und Konfigurations Anleitung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung#vm-einrichten) der VM befolgen.
