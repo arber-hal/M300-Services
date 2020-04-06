@@ -7,9 +7,9 @@ In diesem Markdown Dokument teile ich meine Erfahrungen und Lernschritte die ich
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [K1](#k1)
   - [VirtualBox](#virtualbox)
-  - [Vagrant](#vagrant)
-  - [Visual Studio Code](#visual-studio-code)
-  - [Git-Client & SSH-Key](#Git-Client & SSH-Key)
+- [K3](#k3)
+  - [Vagrant Befehle](#vagrant-befehle)
+- [K5](#k5)
 
 
 
@@ -214,11 +214,11 @@ K3
 | `vagrant halt`            | Stoppt die laufende Virtuelle Maschine                            |
 | `vagrant destroy`         | Stoppt die Virtuelle Maschine und zerstört sie.                   |
 
-## Testen
-### Apache
-1. Localhost auf dem Web-Browser eingegeben
-2. index.html geändert uind nachgeschaut ob es übernommen wurde
-3. mit folgendem Befehl wird das index.html in der Shell angezeigt
-´´´Shell
-curl -f [IP Adresse]
-´´´
+K5
+======
+
+*Was wusste ich schon über VMs und Cloud Funktionen*
+Wir haben das Thema Vagrant ganz kurz in einem ÜK angeschnitten wir sind aber nicht weiter auf das Thema Cloud eingegangen also wusste ich am Anfang des Moduls nicht viel über das Thema.
+
+*Reflexion* 
+Ich habe vieles neues gelernt was die Cloud Umgebung anbelangt und es lief das ganze Projekt eigentlich ziemlich gut jetzt gegen Schluss hatte ich Probleme mit der VM sie liess sich nicht mehr sauber erstellen und ich konnte den Grund daür nicht herausfinden. Was mir besonders gut gefallen hat und auch spannend war, war die schnelle Konifguration anhand des Vagrant File, das hat mir gezeigt wieviel schneller man eine umgebunge aufbauen könnte wenn man das richtige know-how hätte. 

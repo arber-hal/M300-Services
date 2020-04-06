@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
-  proxy_conf = "proxym300.conf"
-  mysql_password = "m300mysql"
+  proxy_conf = "proxytest.conf"
+  
 
   # Box OS Setting
   config.vm.box = "ubuntu/xenial64"
@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
   sudo apt-get install ufw -y
   sudo apt-get install libxml2-dev -y
   # Vorkonfiguration für die MYSQL-Installation und deren Installation
-  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password #{mysql_password}"
-  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password #{mysql_password}"
+  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password mysqlpassword"
+  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysqlpassword"
   sudo apt-get -yq install mysql-server
   # Vorkonfiguration für die PHPMyAdmin-Installation und deren Installation
   sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/internal/skip-preseed boolean true"
